@@ -1,0 +1,35 @@
+﻿@model IEnumerable<PartyIn_L01.Models.GuestResponse>
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>ListResponses</title>
+</head>
+<body>
+    <h2>Itt van kik jönnek</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Név</th>
+                <th>Email</th>
+                <th>Telefon</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (PartyIn_L01.Models.GuestResponse r in Model)
+            {
+               <tr>
+                   <td>@r.Name</td>
+                   <td>@r.Email</td>
+                   <td>@r.Phone</td>
+               </tr> 
+            }
+        </tbody>
+    </table>
+</body>
+</html>

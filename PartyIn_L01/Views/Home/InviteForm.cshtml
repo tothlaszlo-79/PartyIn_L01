@@ -1,0 +1,40 @@
+﻿@model PartyIn_L01.Models.GuestResponse
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>InviteForm</title>
+</head>
+<body>
+   <form asp-action="InviteForm" method="post">
+       <p>
+           <label asp-for="Name">Hogy hívnak:</label>
+           <input asp-for="Name"/>
+       </p>
+       <p>
+           <label asp-for="Email">Mi az email címed:</label>
+           <input asp-for="Email"/>
+       </p>
+       <p>
+           <label asp-for="Phone">Mi a telefonszámod:</label>
+           <input asp-for="Phone"/>
+       </p>
+       <p>
+           <label>Szeretnél csatlakozni?</label>
+           <select asp-for="WillAttend">
+               <option value="">Válassz egy opciót</option>
+               <option value="true">Igen, ott leszek</option>
+               <option value="false">Nem tudok menni</option>
+           </select>
+       </p>
+       <button type="submit">Küldés</button>
+   </form>
+</body>
+</html>
+
+

@@ -1,0 +1,28 @@
+﻿@model PartyIn_L01.Models.GuestResponse
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Thenks</title>
+</head>
+<body>
+    <p>
+        <h1>Köszönjük, @Model.Name</h1>
+        @if(Model.WillAttend == true)
+        {
+            @:Köszi hogy jössz, sör a hűtőben!
+        }
+        else
+        {
+            @:Sajnáljuk, majd legközelebb
+        }
+    </p>
+    <p>Katt<a asp-action="ListResponses">
+        ide</a>, hogy kik jönnek</p>
+</body>
+</html>
